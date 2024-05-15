@@ -1,11 +1,13 @@
-<header>
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('wines')}}">Wines</a>
-        </li>
-    </ul>
+<header class="bg-secondary py-3">
+
+
+    <div class="d-flex justify-content-between  ">
+
+        <h2>Boolean</h2>
+
+        <a class="btn btn-primary "  href="{{route('home')}}">Home</a>
+
+    </div>
+
 
 </header>
