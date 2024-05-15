@@ -1,6 +1,11 @@
 <header>
-    <h1>Header</h1>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('wines')}}">Wines</a>
+        </li>
+    </ul>
 
-    <a href="{{route('home')}}">Home</a>
-    <a href="{{route('nuova-pagina')}}">Nuova Pagina</a>
 </header>
