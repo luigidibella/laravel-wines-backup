@@ -27,7 +27,16 @@
               <td>
                 <div class="d-flex">
                     <a href=""><div class="btn btn-warning me-2"><i class="fa-solid fa-pen-to-square"></i></div></a>
-                    <a href=""><div class="btn btn-danger"><i class="fa-solid fa-trash"></i></div></a>
+                    <form
+                        class="d-inline"
+                        action="{{ route('wines.destroy', $wine->id) }}"
+                        method="POST"
+                        onsubmit="return confirm('Sei sicuro di vole eliminare \'{{ $wine->wine }}\'?')"
+                    >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    </form>
                 </div>
               </td>
             </tr>
