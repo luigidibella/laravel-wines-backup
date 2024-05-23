@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="height: calc(100vh - 88px - 40px);">
     <h1>Modifica vino</h1>
 
     <form action="{{ route('wines.update', $wine )}}" method="POST">
