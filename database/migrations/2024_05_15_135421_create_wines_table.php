@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('reviews', 50);
             $table->string('slug', 150)->unique();
             $table->string('location', 100);
-            $table->string('image', 100);
+            $table->string('image', 500)->nullable();
             $table->timestamps();
         });
     }

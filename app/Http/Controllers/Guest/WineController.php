@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Wine;
+use App\Functions\Helper as Help;
+use App\Http\Requests\WineRequest;
 
 class WineController extends Controller
 {
@@ -13,7 +15,7 @@ class WineController extends Controller
      */
     public function index()
     {
-        $wines = Wine::all();
+        $wines = Wine::orderByDesc('id')->get();
         return view('wines.index', compact('wines'));
     }
 
@@ -28,9 +30,17 @@ class WineController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(WineRequest $request)
     {
-        //
+        $form_data = $request->all();
+        $form_data['slug'] = Help::generateSlug($form_data['wine'], new Wine());
+
+        $new_wine = new Wine();
+        $new_wine->fill($form_data);
+        /* dd($new_wine); */
+        $new_wine->save();
+
+        return redirect()->route('wines.index', $new_wine);
     }
 
     /**
