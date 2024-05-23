@@ -16,11 +16,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('wines.create')}}">Aggiungi Vino</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
             </ul>
-
           </div>
         </div>
       </nav>

@@ -67,7 +67,7 @@
             @enderror
         </div>
 
-        <button class="btn btn-success" type="submit">Invia nuovo fumetto</button>
+        <button class="btn btn-success" type="submit">Invia nuovo vino</button>
         <button class="btn btn-danger" type="reset">Reset</button>
 
     </form>
